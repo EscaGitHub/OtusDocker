@@ -10,6 +10,10 @@
     
     curl http://arch.homework/health
 
+Rewrite:
+    
+    curl http://arch.homework/otusapp/ilya/health
+
 ## Подготовка
 Предварительно установлен minikube:
 
