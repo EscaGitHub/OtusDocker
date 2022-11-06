@@ -4,9 +4,9 @@
 
 Манифесты: 
 
-    kubectl apply -f .\manifests\
+    kubectl apply -f .\kubernetes\manifests\
 
-Ссылка на сервис: 
+Вызов сервиса: 
     
     curl http://arch.homework/health
 

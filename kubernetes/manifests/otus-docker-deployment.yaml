@@ -20,3 +20,15 @@ spec:
                   ports:
                       - containerPort: 8000
                         name: web
+                  livenessProbe:
+                      httpGet:
+                          port: 8000
+                          path: /health
+                      initialDelaySeconds: 10
+                      periodSeconds: 20
+                  readinessProbe:
+                      httpGet:
+                          port: 8000
+                          path: /health
+                      initialDelaySeconds: 5
+                      periodSeconds: 10
