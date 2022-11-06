@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: otus-docker-deployment
+    labels:
+        app: otus-docker
+spec:
+    replicas: 3
+    selector:
+        matchLabels:
+            app: otus-docker
+    template:
+        metadata:
+            labels:
+                app: otus-docker
+        spec:
+            containers:
+                - name: otus-docker
+                  image: escadockerhub/otus.docker:1.0
+                  ports:
+                      - containerPort: 8000
+                        name: web

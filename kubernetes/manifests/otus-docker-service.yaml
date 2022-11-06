@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: otus-docker-service
+  labels:
+    app: otus-docker
+spec:
+  selector:
+    app: otus-docker
+  ports:
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: web
